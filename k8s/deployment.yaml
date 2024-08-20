@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-app
+  name: kyle-app
   labels:
-    app: example-app
+    app: kyle-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: example-app
+      app: kyle-app
   template:
     metadata:
       labels:
-        app: example-app
+        app: kyle-app
     spec:
       containers:
-        - name: example-app
+        - name: kyle-app
           image: asia-east1-docker.pkg.dev/smiling-stock-425106-c9/devops-repo/example-app-app:latest
           ports:
             - containerPort: 80
